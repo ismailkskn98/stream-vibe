@@ -5,12 +5,13 @@ import { moviesByIdCategory } from "@/services/moviesByIdCategory";
 import type { MoviesType } from "@/types";
 import React from "react";
 
-export default async function page({ params }: { params: { id: string } }) {
-  const movies: { page: number; results: MoviesType[] } = await moviesByIdCategory(params.id);
+export default async function page({ params }: { params: Promise<{ id: string }> }) {
+  const paramsResult = await params;
+  const movies: { page: number; results: MoviesType[] } = await moviesByIdCategory(paramsResult.id);
   const categories = await categoriesFetch();
   return (
     <section>
-      <CategoriesNames categoriesName={categories} id={Number(params.id)} />
+      <CategoriesNames categoriesName={categories} id={Number(paramsResult.id)} />
       <CategoryMoviesCards movies={movies.results} />
     </section>
   );

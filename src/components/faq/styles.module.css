@@ -1,0 +1,50 @@
+.faqSection {
+  @apply w-full flex flex-col gap-10 md:gap-14 2xl:gap-20;
+}
+
+/*  */
+
+.faqTitleArticle {
+  @apply w-full flex md:items-center justify-between flex-col md:flex-row gap-5;
+}
+.faqTitleH2 {
+  @apply text-white text-xl md:text-[28px] 2xl:text-4xl font-bold whitespace-nowrap;
+}
+.faqTitleP {
+  @apply text-grey-60 text-[14px] md:text-base 2xl:text-lg font-light;
+}
+
+/*  */
+
+.faqAccordionMain {
+  @apply w-full flex items-start justify-between flex-col xl:flex-row gap-x-5 md:gap-x-10 2xl:gap-x-20;
+}
+.faqAccordion {
+  @apply w-full grid grid-cols-1 gap-y-[2px] overflow-hidden;
+}
+.faqAccordionItem {
+  @apply border-0 flex flex-col items-start;
+}
+.faqAccordionArticle {
+  @apply text-white  w-full flex items-center gap-4 2xl:gap-5 px-[10px] py-5 md:p-6 2xl:p-8;
+}
+.faqAccordionArticleSpan {
+  @apply p-3 md:p-4 2xl:p-5 bg-black-12 font-semibold text-base 2xl:text-xl rounded-xl;
+}
+.faqAccordionTriggerh4 {
+  @apply text-sm md:text-xl 2xl:text-[22px] font-medium text-white text-start;
+}
+.faqAccordionContentP {
+  @apply text-grey-60 font-light text-xs md:text-base 2xl:text-lg text-start;
+}
+.faqBorder {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(229, 0, 0, 0) 0%, rgba(229, 0, 0, 1) 17%, rgba(229, 0, 0, 0) 100%);
+}
+
+/* Mobil */
+
+.faqAccordionMobil {
+  @apply w-full xl:grid grid-cols-1 hidden gap-y-[2px] overflow-hidden;
+}

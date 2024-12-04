@@ -1,0 +1,35 @@
+.ctaSection {
+  @apply relative w-full flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-5 px-[30px] md:px-[60px] 2xl:px-20 py-[50px] md:py-20 2xl:py-[100px] rounded-xl border border-solid border-black-15 overflow-hidden;
+}
+
+/*  */
+
+.ctaImagesMain {
+  @apply w-[103%] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-9 gap-[20px] -z-20;
+}
+.ctaImagesBg {
+  @apply absolute -top-1 -left-1 -right-1 -bottom-1 w-full h-full;
+  background: rgb(15, 15, 15);
+  background: linear-gradient(90deg, rgba(15, 15, 15, 1) 2%, rgba(20, 15, 15, 0.97) 19%, rgba(34, 14, 14, 0.91) 42%, rgba(166, 0, 0, 0.36668434463629207) 100%);
+}
+@media screen and (max-width: 768px) {
+  .ctaImages {
+    background: rgb(15, 15, 15);
+    background: linear-gradient(180deg, rgba(15, 15, 15, 1) 2%, rgba(20, 15, 15, 0.97) 35%, rgba(34, 14, 14, 0.9605218796502977) 47%, rgba(166, 0, 0, 0.4535190785298494) 100%);
+  }
+}
+.ctaImage {
+  @apply object-cover w-[137px] h-[158px] md:w-[165px] md:h-[83.75px];
+}
+
+/*  */
+
+.ctaTitleArticle {
+  @apply flex flex-col items-center lg:items-start gap-[10px] 2xl:gap-[14px];
+}
+.ctaTitleH3 {
+  @apply text-white font-bold text-2xl 2xl:text-5xl text-center lg:text-start;
+}
+.ctaTitleP {
+  @apply text-grey-60 font-light text-base 2xl:text-lg text-center lg:text-start;
+}

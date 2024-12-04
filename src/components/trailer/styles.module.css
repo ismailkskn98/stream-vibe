@@ -1,0 +1,49 @@
+.trailer {
+  @apply relative w-full h-[770px] overflow-hidden rounded-xl border border-solid border-black-12 z-20;
+}
+.trailerLinear {
+  background: rgb(38, 38, 38);
+  background: linear-gradient(180deg, rgba(38, 38, 38, 1) 0%, rgba(38, 38, 38, 0) 76%), linear-gradient(0deg, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0) 47%);
+  @apply min-w-full min-h-full absolute -top-1 -left-1 -right-1 -bottom-1 z-10;
+}
+.trailerMain {
+  @apply w-full absolute z-10 bottom-0 left-1/2 -translate-x-1/2 flex items-center justify-center gap-10 pb-5 px-12;
+}
+
+/*  */
+
+.trailerSection {
+  @apply relative w-full border border-solid border-black-15;
+}
+.trailerSectionArticle {
+  @apply absolute -top-9 left-[50px] w-full;
+}
+.trailerSectionDiv {
+  @apply w-min h-min flex items-center gap-1 px-6 py-[14px] 2xl:py-[18px] bg-red-45 text-white rounded-lg;
+}
+.trailerSectionSpan {
+  @apply text-sm md:text-lg 2xl:text-lg font-semibold whitespace-nowrap capitalize;
+}
+.trailerSectionMain {
+  @apply w-full h-full flex flex-col items-start gap-[100px] p-[50px];
+}
+
+.trailerText {
+  @apply w-4/5 h-56 absolute z-20 bottom-32 left-1/2 -translate-x-1/2 flex-col-center;
+}
+.trailerTextH2 {
+  @apply text-white font-bold text-2xl md:text-[30px] 2xl:text-[38px];
+}
+.trailerTextP {
+  @apply font-medium text-base 2xl:text-lg text-grey-75 line-clamp-2;
+}
+.trailerTextLink {
+  @apply w-min h-min flex items-center gap-1 px-5 2xl:px-6 py-[14px] 2xl:py-[14px] bg-red-45 hover:bg-red-55 transition-all text-white rounded-lg;
+}
+.trailerTextLinkSpan {
+  @apply text-sm md:text-lg 2xl:text-lg font-semibold whitespace-nowrap capitalize;
+}
+
+.trailerButton {
+  @apply bg-black-06 p-[14px] text-white rounded-lg border border-solid border-black-12;
+}

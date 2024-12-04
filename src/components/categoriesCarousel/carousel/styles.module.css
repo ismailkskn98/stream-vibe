@@ -1,0 +1,80 @@
+.homeCategories {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(185, 185, 185, 0) 93%, rgba(20, 20, 20, 1) 100%),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(185, 185, 185, 0) 93%, rgba(20, 20, 20, 1) 100%);
+  @apply absolute -top-1 -left-1 -bottom-1 -right-1 min-w-full min-h-full z-20 pointer-events-none;
+}
+
+.carouselContent {
+  @apply w-full flex items-center justify-between gap-[30px] relative;
+}
+
+.title {
+  @apply flex flex-col gap-[10px] 2xl:gap-[14px];
+}
+
+.titleH2 {
+  @apply text-white font-bold text-xl md:text-2xl xl:text-[38px];
+}
+
+.titleDescription {
+  @apply text-grey-60 font-light text-sm md:text-base xl:text-lg;
+}
+
+.carouselItem {
+  @apply basis-1/2 lg:basis-1/4 max-w-48 lg:max-w-[300px] bg-black-10 flex flex-col items-center p-5 lg:p-[30px] rounded-xl cursor-pointer;
+}
+
+.categoriesImages {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(26, 26, 26, 1) 100%);
+  @apply absolute top-0 left-0 w-full h-full z-10;
+}
+
+.categoryImage {
+  @apply max-h-[67px] md:max-h-[103px] 2xl:max-h-[123px] object-cover rounded-[10px];
+}
+
+.categoriesTitle {
+  @apply w-full flex items-center justify-between text-white;
+}
+
+.buttons {
+  @apply relative bg-black-06 items-center justify-between gap-5 p-4 rounded-xl lg:flex hidden;
+}
+.button {
+  @apply p-[14px] cursor-pointer bg-black-10 text-white rounded-lg border border-solid border-black-12;
+}
+
+.buttonIcon {
+  @apply min-w-[28px] min-h-[28px] bg-black-10 text-white rounded-lg;
+}
+
+/*  */
+
+.showSeeAllLink {
+  @apply absolute top-0 right-0 flex items-center justify-center min-h-full w-36 text-white bg-[#0f0f0fa8] hover:bg-[#0f0f0ffc] transition-all z-10 cursor-pointer;
+}
+.showSeeAllBg {
+  background: #0f0f0f;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, #0f0f0f 93%, #0f0f0f 100%);
+  @apply h-full w-full absolute top-0 left-0;
+}
+.showSeeAllSpan {
+  @apply text-2xl font-semibold tracking-widest;
+}
+
+/*  */
+
+.movieDetailItem {
+  @apply basis-1/2 lg:basis-1/4 max-w-48 lg:max-w-[300px] bg-black-10 flex flex-col items-center gap-5 p-5 rounded-xl cursor-pointer;
+}
+.movieDetailItemImg {
+  @apply h-full w-full object-cover rounded-[10px];
+}
+.movieDetailItemArticle {
+  @apply w-full flex items-center flex-between text-white group-hover:text-grey-60 transition-all duration-300;
+}
+.movieDetailItemSpan {
+  @apply flex items-center flex-between gap-1 bg-black-08 text-grey-60 border border-solid border-black-15 px-2 py-[6px] rounded-[51px];
+}

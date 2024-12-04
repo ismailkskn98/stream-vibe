@@ -1,0 +1,60 @@
+.pricingSection {
+  @apply w-full flex flex-col gap-10 md:gap-14 2xl:gap-20;
+}
+
+/*  */
+
+.pricingTitleArticle {
+  @apply w-full flex md:items-center justify-between flex-col md:flex-row gap-5;
+}
+.pricingTitleDiv {
+  @apply flex flex-col gap-[10px] 2xl:gap-[14px];
+}
+.pricingTitleH2 {
+  @apply text-white text-xl md:text-[28px] 2xl:text-4xl font-bold whitespace-nowrap;
+}
+.pricingTitleP {
+  @apply text-grey-60 text-[14px] md:text-base 2xl:text-lg font-light;
+}
+
+/*  */
+
+.pricingButtonsArticle {
+  @apply w-min h-min bg-black-06 text-sm 2xl:text-lg font-medium text-grey-75 flex items-center border border-solid border-black-15 p-2 2xl:p-[10px] rounded-[10px];
+}
+.pricingButtonIsYearly {
+  @apply text-white bg-black-12 rounded-[10px] whitespace-nowrap;
+}
+.pricingButton {
+  @apply transition-all hover:text-white px-5 py-3 2xl:px-6 2xl:py-[14px];
+}
+
+/*  */
+
+.pricingCardsMain {
+  @apply grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 2xl:gap-[30px];
+}
+
+/*  */
+
+.pricingCardArticle {
+  @apply flex flex-col items-start gap-[30px] md:gap-10 2xl:gap-[40px] p-5 md:p-10 2xl:p-[50px] bg-black-10 border border-solid border-black-15 rounded-[10px] 2xl:rounded-xl;
+}
+.pricingCardH5 {
+  @apply text-white text-lg md:text-xl 2xl:text-2xl font-bold;
+}
+.pricingCardP {
+  @apply text-grey-60 text-sm md:text-base 2xl:text-lg font-light min-h-[84px];
+}
+.pricingCardMoneySpan {
+  @apply text-white font-semibold text-2xl md:text-3xl 2xl:text-[40px];
+}
+.pricingCardTextSpan {
+  @apply 2xl:-mb-1 text-grey-60 font-medium text-sm md:text-base 2xl:text-lg;
+}
+.pricingCardFreeLink {
+  @apply bg-black-08 text-white font-semibold text-sm lg:text-base 3xl:text-lg border border-solid border-black-15 px-4 py-3 2xl:px-6 2xl:py-[18px] rounded-md 2xl:rounded-lg whitespace-nowrap hover:bg-black-06 transition-all;
+}
+.pricingCardPlanLink {
+  @apply bg-red-45 text-white font-semibold text-sm lg:text-base 3xl:text-lg px-4 py-3 2xl:px-6 2xl:py-[18px] rounded-md 2xl:rounded-lg whitespace-nowrap hover:bg-red-55 transition-all;
+}

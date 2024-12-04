@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr min(92%, 100rem) 1fr;
+  grid-template-rows: 7.5rem 1fr auto;
+}
+
+.grid-container > * {
+  grid-column: 2;
+}
+
+.grid-container > .fluid {
+  grid-column: 1 / -1;
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+  .common-button {
+    @apply w-min h-min flex items-center gap-1 px-6 py-[14px] 2xl:py-[18px] bg-red-45 hover:bg-red-55 transition-all text-white rounded-lg;
+  }
+  .common-button-text {
+    @apply text-sm md:text-lg 2xl:text-lg font-semibold whitespace-nowrap capitalize;
+  }
+}
+@tailwind base;
+@tailwind components;

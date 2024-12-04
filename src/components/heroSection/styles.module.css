@@ -1,0 +1,73 @@
+.hero {
+  background: rgb(20, 20, 20);
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 1) 100%), linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 1) 100%);
+  @apply w-full h-full absolute top-0 left-0 bottom-0 right-0 z-10;
+}
+
+/* hero-section */
+.heroSection {
+  @apply flex flex-col justify-center items-center gap-5 sm:gap-10 md:gap-5 lg:gap-20 xl:gap-10;
+}
+.heroBackground {
+  @apply absolute -top-1 -left-1 -right-1 -bottom-1 w-full h-full bg-black-08 bg-cover bg-center opacity-5 -z-10;
+}
+.heroMain {
+  @apply relative flex items-center justify-center w-full row-start-1 row-end-3 h-[18.75rem] md:h-[32.5rem] 2xl:h-[43rem] text-black-30 z-10 pt-2 md:pt-16;
+}
+.heroBackgroundLogo {
+  @apply relative row-start-1 row-end-4 flex items-center justify-center w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[470px] lg:h-[470px];
+}
+.heroBackgroundImagesSection {
+  @apply w-full max-h-[500px] md:max-h-[700px] 2xl:max-h-[858px] absolute top-0 left-0 -z-20 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-9 3xl:grid-cols-10 gap-[10px] 2xl:gap-[20px] overflow-hidden;
+}
+
+/* entry */
+.entryMain {
+  @apply flex flex-col items-center gap-12 w-full h-min row-start-3 row-end-3 -mt-3;
+}
+.entryArticle {
+  @apply max-w-[1096px] flex flex-col items-center gap-[10px] xl:gap-[18px];
+}
+.entryH2 {
+  @apply font-bold text-[28px] md:text-[48px] xl:text-[58px] text-white;
+}
+.entryP {
+  @apply font-light text-lg text-grey-60 text-center leading-7;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.imageAnimation {
+  position: relative;
+  animation: moveUpDown 3.5s ease-in-out infinite;
+}
+
+.imageAnimation-1 {
+  animation-delay: 0s;
+}
+
+.imageAnimation-2 {
+  animation-delay: 0.5s;
+}
+
+.imageAnimation-3 {
+  animation-delay: 1s;
+}
+
+.imageAnimation-4 {
+  animation-delay: 1.5s;
+}
+
+.imageAnimation-5 {
+  animation-delay: 2s;
+}

@@ -73,8 +73,8 @@
   @apply h-full w-full object-cover rounded-[10px];
 }
 .movieDetailItemArticle {
-  @apply w-full flex items-center flex-between text-white group-hover:text-grey-60 transition-all duration-300;
+  @apply w-full flex items-center justify-between text-white group-hover:text-grey-60 transition-all duration-300;
 }
 .movieDetailItemSpan {
-  @apply flex items-center flex-between gap-1 bg-black-08 text-grey-60 border border-solid border-black-15 px-2 py-[6px] rounded-[51px];
+  @apply flex items-center justify-between gap-1 bg-black-08 text-grey-60 border border-solid border-black-15 px-2 py-[6px] rounded-[51px];
 }

@@ -29,7 +29,7 @@
 }
 
 .trailerText {
-  @apply w-4/5 h-56 absolute z-20 bottom-32 left-1/2 -translate-x-1/2 flex-col-center;
+  @apply w-4/5 h-56 absolute z-20 bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center;
 }
 .trailerTextH2 {
   @apply text-white font-bold text-2xl md:text-[30px] 2xl:text-[38px];

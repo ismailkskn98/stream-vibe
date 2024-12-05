@@ -1,11 +1,11 @@
 .welcome {
-  @apply flex flex-col items-start gap-[30px] md:gap-10 2xl:gap-[50px];
+  @apply flex flex-col items-start justify-between gap-[30px] md:gap-10 2xl:gap-[50px];
 }
 .welcomeDiv {
-  @apply flex flex-col items-start gap-[10px] 2xl:gap-[14px] max-w-[533px];
+  @apply flex flex-col items-start gap-[10px] 2xl:gap-[40px] max-w-[533px];
 }
 .welcomeH1 {
-  @apply font-bold text-[30px] md:text-4xl 2xl:text-5xl text-white leading-[150%];
+  @apply flex flex-col items-start gap-5 font-bold text-[30px] md:text-4xl 2xl:text-5xl text-white leading-[150%];
 }
 .welcomeP {
   @apply text-grey-60 text-[14px] md:text-base 2xl:text-lg font-light leading-[150%];

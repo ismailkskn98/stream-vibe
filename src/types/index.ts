@@ -116,3 +116,11 @@ export type CategoryNamesType = {
   id: number;
   name: string;
 };
+
+export type FormData = {
+  firstname: string;
+  lastname: string;
+  email: string;
+  number: string;
+  message: string;
+};

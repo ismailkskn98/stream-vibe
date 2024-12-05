@@ -1,0 +1,52 @@
+.welcome {
+  @apply flex flex-col items-start gap-[50px];
+}
+.welcomeDiv {
+  @apply flex flex-col items-start gap-[14px] max-w-[533px];
+}
+.welcomeH1 {
+  @apply font-bold text-5xl text-white leading-[150%];
+}
+.welcomeP {
+  @apply font-normal text-grey-60 text-lg leading-[150%];
+}
+
+/*  */
+
+.welcomeImg {
+  @apply relative w-[533px] h-[477px] rounded-lg overflow-hidden border-[6px] bg-black-06 border-solid border-black-15 flex items-center justify-center;
+}
+.welcomeImgDiv {
+  @apply absolute min-w-[600px] min-h-[500px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 grid grid-cols-4 grid-rows-4 gap-5;
+}
+
+.supportImg {
+  @apply min-w-[135px] min-h-[168px] object-cover rounded-xl;
+  animation: imgAnimate 3s ease-in-out infinite;
+}
+.supportImg_1 {
+  animation-delay: 0s;
+}
+.supportImg_2 {
+  animation-delay: 0.2s;
+}
+.supportImg_3 {
+  animation-delay: 0.5s;
+}
+.supportImg_4 {
+  animation-delay: 0.7s;
+}
+.supportImg_5 {
+  animation-delay: 0.9s;
+}
+@keyframes imgAnimate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

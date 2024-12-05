@@ -1,5 +1,5 @@
-import CategoryMoviesCards from "@/components/categories/cards";
-import CategoriesNames from "@/components/categories/names";
+import CategoryMoviesCards from "@/components/movies/cards";
+import CategoriesNames from "@/components/movies/names";
 import { categoriesFetch } from "@/services/categoriesFetch";
 import { moviesByIdCategory } from "@/services/moviesByIdCategory";
 import type { MoviesType } from "@/types";

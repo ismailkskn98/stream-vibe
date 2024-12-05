@@ -1,4 +1,4 @@
-import CategoriesNames from "@/components/categories/names";
+import CategoriesNames from "@/components/movies/names";
 import { categoriesFetch } from "@/services/categoriesFetch";
 import React from "react";
 

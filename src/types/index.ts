@@ -117,7 +117,7 @@ export type CategoryNamesType = {
   name: string;
 };
 
-export type FormData = {
+export type SupportFormType = {
   firstname: string;
   lastname: string;
   email: string;

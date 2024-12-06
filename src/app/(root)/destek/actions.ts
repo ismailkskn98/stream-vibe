@@ -1,22 +1,24 @@
 "use server";
 
 import { formSchema } from "@/components/support/formSchema";
-import type { FormData } from "@/types";
-import { z } from "zod";
 
-export async function supportForm(state: unknown, formData: FormData) {
-  try {
-    // Validasyon
-    const parsedData = formSchema.parse(formData); // Validasyon
-    console.log("Form verisi işlendi:", parsedData);
+export async function supportFormAction(state: unknown, formData: FormData) {
+  // Validasyon
+  const validatedFields = formSchema.safeParse({
+    firstname: formData.get("firstname"),
+    lastname: formData.get("lastname"),
+    email: formData.get("email"),
+    number: formData.get("number"),
+    message: formData.get("message"),
+  }); // Validasyon
 
-    // Örnek işlem (veritabanı kaydı vs.)
-    // await db.user.create({ data: parsedData });
-
-    return { success: true, message: "Form başarıyla işlendi!" };
-  } catch (error) {
-    if (error instanceof z.ZodError) {
-      return { success: false, message: error.message };
-    }
+  // Form verisi geçerli değilse
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+    };
   }
+
+  // Veriyi güncelle
+  return {}; // Başarılı bir işlem durumunda boş dönebilir veya gerekli veriyi güncelleyebilirsiniz.
 }

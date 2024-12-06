@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr min(92%, 100rem) 1fr;

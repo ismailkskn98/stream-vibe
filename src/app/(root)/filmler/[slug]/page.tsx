@@ -10,7 +10,7 @@ export default async function page({ params }: { params: Promise<{ slug: string 
   const movies: { page: number; results: MoviesType[] } = await moviesByIdCategory(paramsResult.slug);
   const categories = await categoriesFetch();
   return (
-    <section>
+    <section className="w-full h-full">
       <CategoriesNames categoriesName={categories} slug={paramsResult.slug} />
       <CategoryMoviesCards movies={movies.results} />
     </section>

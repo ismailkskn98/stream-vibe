@@ -67,7 +67,7 @@ export default function SupportForm() {
             id="message"
             cols={30}
             rows={10}
-            className="w-full max-h-[163px] p-5 border border-solid border-black-15 bg-black-08 rounded-lg text-lg font-normal text-grey-60 outline-none placeholder:text-black-25"
+            className="w-full max-h-[163px] p-5 border border-solid border-black-15 bg-black-08 rounded-lg text-lg font-normal text-grey-60 outline-none placeholder:text-black-25 resize-none"
             placeholder="Mesajınızı giriniz"
           />
         </article>

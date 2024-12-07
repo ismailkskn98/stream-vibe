@@ -21,7 +21,13 @@ export default function CustomInput(props: InputProps) {
         {label}
       </label>
       <input {...input} defaultValue={(state?.state as any)?.[input.name] || ""} className={styles.supportFormInput} />
-      {state?.errors?.[input.name] && <span className={styles.supportFormSpan}>*{state?.errors?.[input.name]}</span>}
+      <div className={`absolute left-2 flex flex-col gap-1 ${state?.errors?.[input.name]?.length > 1 ? "-bottom-[53px]" : "-bottom-7"}`}>
+        {state?.errors?.[input.name]?.map((error: any, index: number) => (
+          <span key={index} className={styles.supportFormSpan}>
+            *{error}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

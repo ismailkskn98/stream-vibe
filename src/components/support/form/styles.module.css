@@ -5,7 +5,7 @@
   @apply w-full flex flex-col items-end gap-5 md:gap-10 2xl:gap-[50px];
 }
 .supportFormArticle {
-  @apply w-full flex flex-col md:flex-row gap-5 2xl:gap-[50px];
+  @apply w-full flex flex-col xl:flex-row justify-between gap-5 2xl:gap-[50px];
 }
 .supportFormDiv {
   @apply relative w-full flex flex-col items-start gap-3 2xl:gap-4;
@@ -17,7 +17,7 @@
   @apply w-full max-h-[53px] 2xl:max-h-[67px] p-4 2xl:p-5 border border-solid border-black-15 bg-black-08 rounded-md 2xl:rounded-lg text-lg font-normal text-grey-60 outline-none placeholder:text-black-25;
 }
 .supportFormSpan {
-  @apply text-red-500 text-sm absolute -bottom-7 left-2;
+  @apply text-red-500 text-sm;
 }
 .customTextareaArticle {
   @apply relative w-full flex flex-col items-start gap-4;

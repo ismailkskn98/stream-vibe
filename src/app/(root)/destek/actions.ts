@@ -1,6 +1,6 @@
 "use server";
 
-import { formSchema } from "@/components/support/formSchema";
+import { formSchema } from "@/components/support/form/formSchema";
 
 export async function supportFormAction(state: unknown, formData: FormData) {
   // Validasyon

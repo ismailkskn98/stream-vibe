@@ -1,0 +1,36 @@
+.supportFormSection {
+  @apply w-[357px] md:w-[800px] 2xl:w-[976px] h-[766px] md:h-[592px] 2xl:h-[740px] p-6 md:p-10 2xl:p-[50px] bg-black-06 border border-solid border-black-15 rounded-[10px] 2xl:rounded-xl;
+}
+.supportForm {
+  @apply w-full flex flex-col items-end gap-5 md:gap-10 2xl:gap-[50px];
+}
+.supportFormArticle {
+  @apply w-full flex flex-col md:flex-row gap-5 2xl:gap-[50px];
+}
+.supportFormDiv {
+  @apply relative w-full flex flex-col items-start gap-3 2xl:gap-4;
+}
+.supportFormLabel {
+  @apply text-white text-base 2xl:text-lg font-semibold;
+}
+.supportFormInput {
+  @apply w-full max-h-[53px] 2xl:max-h-[67px] p-4 2xl:p-5 border border-solid border-black-15 bg-black-08 rounded-md 2xl:rounded-lg text-lg font-normal text-grey-60 outline-none placeholder:text-black-25;
+}
+.supportFormSpan {
+  @apply text-red-500 text-sm absolute -bottom-7 left-2;
+}
+.customTextareaArticle {
+  @apply relative w-full flex flex-col items-start gap-4;
+}
+.customTextareaLabel {
+  @apply text-white text-base 2xl:text-lg font-semibold;
+}
+.customTextarea {
+  @apply w-full max-h-[163px] p-5 border border-solid border-black-15 bg-black-08 rounded-lg text-lg font-normal text-grey-60 outline-none placeholder:text-black-25 resize-none;
+}
+.customTextareaSpan {
+  @apply text-red-500 text-sm absolute -bottom-7 left-2;
+}
+.formFooterCheckbox {
+  @apply outline-none border border-solid border-black-15 appearance-none checked:appearance-auto accent-red-45 w-5 h-5 rounded-[4px];
+}

@@ -20,7 +20,7 @@ export default async function page() {
   const allMovies: MoviesType[] = [...trendMoviesPage1.results, ...trendMoviesPage2.results]; // ortalama 40 film geliyor page başı 20 tane
   const moviesDetails: MovieDetailType[] = await detailedMovies(movies.results);
   return (
-    <section className="space-y-[150px] mt-3">
+    <section className="mt-36 space-y-36">
       <Trailer movies={movies.results} />
       <TrailerSection title="Filmler">
         <CategoriesCarousel moviesByGenre={moviesByGenre.slice(0, 8)} id={Math.ceil(Math.random() * 10000)} title="Türlerimiz" />

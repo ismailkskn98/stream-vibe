@@ -1,5 +1,6 @@
 import React from "react";
 import PricingTable from "./pricingTable";
+import MobilPricingTable from "./mobilPricingTable";
 
 export default function FeaturesComparison() {
   return (
@@ -11,6 +12,7 @@ export default function FeaturesComparison() {
         </p>
       </article>
       <PricingTable />
+      <MobilPricingTable />
     </main>
   );
 }

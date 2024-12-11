@@ -22,7 +22,7 @@
   @apply w-min h-min flex items-center gap-1 px-6 py-[14px] 2xl:py-[18px] bg-red-45 text-white rounded-lg;
 }
 .trailerSectionSpan {
-  @apply text-sm md:text-lg 2xl:text-lg font-semibold whitespace-nowrap capitalize;
+  @apply text-sm md:text-lg 2xl:text-lg font-semibold whitespace-nowrap capitalize overflow-hidden;
 }
 .trailerSectionMain {
   @apply w-full h-full flex flex-col items-start gap-[100px] p-[50px];

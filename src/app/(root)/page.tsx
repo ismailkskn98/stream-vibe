@@ -20,22 +20,24 @@ export default async function Home() {
   const genresList: GenresType[] = genresResult.genres;
   const moviesByGenre: moviesByGenresType[] = await fetchMoviesByGenre(genresList);
   return (
-    <section className="space-y-36">
-      <HeroSection />
+    <>
       <BackgroundImages movies={allMovies} />
-      <CategoriesCarousel
-        id={1}
-        title="Geniş kategori çeşitlerimizi keşfedin"
-        description="Sizi güldürecek bir komedi, düşündürecek bir drama veya yeni bir şeyler öğrenmenizi sağlayacak bir belgesel arıyorsanız"
-        home={true}
-        moviesByGenre={moviesByGenre}
-      />
-      <Devices />
-      <Faq />
-      <Pricing />
-      <CallToAction>
-        <CTAImages movies={allMovies} />
-      </CallToAction>
-    </section>
+      <section className="space-y-36">
+        <HeroSection />
+        <CategoriesCarousel
+          id={1}
+          title="Geniş kategori çeşitlerimizi keşfedin"
+          description="Sizi güldürecek bir komedi, düşündürecek bir drama veya yeni bir şeyler öğrenmenizi sağlayacak bir belgesel arıyorsanız"
+          home={true}
+          moviesByGenre={moviesByGenre}
+        />
+        <Devices />
+        <Faq />
+        <Pricing />
+        <CallToAction>
+          <CTAImages movies={allMovies} />
+        </CallToAction>
+      </section>
+    </>
   );
 }

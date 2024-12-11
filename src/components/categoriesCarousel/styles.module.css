@@ -1,3 +1,3 @@
 .categoryCarouselSection {
-  @apply w-full flex flex-col gap-10 md:gap-14 2xl:gap-16;
+  @apply w-full flex flex-col gap-10 md:gap-14 2xl:gap-16 overflow-hidden;
 }

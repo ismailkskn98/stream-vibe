@@ -1,6 +1,7 @@
 import Cast from "@/components/MovieAndShowDetail/cast";
 import Description from "@/components/MovieAndShowDetail/description";
 import Information from "@/components/MovieAndShowDetail/information";
+import Reviews from "@/components/MovieAndShowDetail/reviews";
 import MovieDetail from "@/components/movieDetail";
 import React from "react";
 
@@ -14,12 +15,14 @@ const getMovieDetails = async (id: string) => {
 export default async function page({ params }: { params: Promise<{ id: string; slug: string }> }) {
   const id = (await params).id;
   const movie = await getMovieDetails(id);
+  console.log(movie);
   return (
     <section className="w-full my-[115px]">
       <MovieDetail>
         <main className="basis-4/5 w-full flex flex-col item-start gap-[30px] rounded-xl">
           <Description />
           <Cast />
+          <Reviews />
         </main>
         <Information />
       </MovieDetail>

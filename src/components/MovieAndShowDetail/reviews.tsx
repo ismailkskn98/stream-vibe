@@ -5,8 +5,24 @@ import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "../ui
 import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from "react-icons/fa6";
 import { Progress } from "../ui/progress";
 import Link from "next/link";
+import moment from "moment";
+import "moment/locale/tr";
 
-export default function Reviews() {
+moment.locale("tr");
+
+export type ReviewProps = {
+  reviews: {
+    author: string;
+    author_details: [];
+    content: string;
+    created_at: string;
+    id: string;
+    updated_at: string;
+    url: string;
+  }[];
+};
+
+export default function Reviews({ reviews }: ReviewProps) {
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [processValue, setProcessValue] = useState(0);
 
@@ -23,7 +39,7 @@ export default function Reviews() {
   }, [api]);
 
   return (
-    <article className="w-full flex flex-col items-start gap-10 p-[50px] bg-black-10 border border-solid border-black-15 rounded-xl">
+    <article className="w-full max-w-[1085px] flex flex-col items-start gap-10 p-[50px] bg-black-10 border border-solid border-black-15 rounded-xl">
       <div className="w-full flex items-center justify-between">
         <h3 className="text-lg font-medium text-grey-60">Yorumlar</h3>
         <Link href="" className="flex items-center gap-1 bg-black-08 border border-solid border-black-15 rounded-lg px-4 py-[14px] text-white">
@@ -34,12 +50,17 @@ export default function Reviews() {
       <div className="w-full flex flex-col items-center gap-10">
         <Carousel setApi={setApi} className="w-full">
           <CarouselContent className="w-full gap-5">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <CarouselItem className="max-w-[468px] flex flex-col items-start gap-5 p-10 bg-black-06 border border-solid border-black-15 rounded-xl text-grey-60" key={index}>
+            {reviews?.map((item, index) => (
+              <CarouselItem
+                className="max-w-[468px] max-h-[270px] flex flex-col items-start gap-5 p-10 bg-black-06 border border-solid border-black-15 rounded-xl text-grey-60"
+                key={index}
+              >
                 <div className="w-full flex items-center justify-between">
                   <div className="flex flex-col items-start">
-                    <h5 className="text-white font-medium text-xl">Aniket Roy</h5>
-                    <p className="font-medium text-lg">From India</p>
+                    <Link href={item.url} target="_blank" className="font-medium text-lg text-white">
+                      {item.author}
+                    </Link>
+                    <p className="font-medium text-lg">{moment(item.created_at).format("D MMMM YYYY, HH:mm")}</p>
                   </div>
                   <div className="flex items-center gap-1 px-[10px] py-[6px] bg-black-08 border border-solid border-black-15 rounded-[51px]">
                     <div className="flex items-center gap-[2px]">
@@ -52,10 +73,7 @@ export default function Reviews() {
                     <p className="font-medium text-xl text-white">4</p>
                   </div>
                 </div>
-                <p className="text-lg font-normal">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem assumenda, ipsum nam tempora nostrum, provident aliquam hic ad eaque natus officia quidem dolore
-                  officiis quaerat in placeat? Nulla, aliquam quod.
-                </p>
+                <p className="text-lg font-normal">{item.content.length > 150 ? item.content.slice(0, 150) + "..." : item.content}</p>
               </CarouselItem>
             ))}
           </CarouselContent>

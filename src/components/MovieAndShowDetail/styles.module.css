@@ -1,0 +1,9 @@
+.gradient {
+  background: rgb(20, 20, 20);
+  background: linear-gradient(0deg, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}

@@ -125,7 +125,7 @@ export type SupportFormType = {
   message: string;
 };
 
-export type filmDetailType = {
+export type movieDetailType = {
   adult: boolean;
   backdrop_path: string;
   belongs_to_collection?: {
@@ -169,4 +169,49 @@ export type filmDetailType = {
   video: boolean;
   vote_average: number;
   vote_count: number;
+};
+
+export type CastType = {
+  id: number;
+  cast: {
+    adult: boolean;
+    cast_id: number;
+    character: string;
+    credit_id: string;
+    gender: number;
+    id: number;
+    known_for_department: string;
+    name: string;
+    order: number;
+    original_name: string;
+    popularity: number;
+    profile_path: string;
+  }[];
+  crew: {
+    adult: boolean;
+    credit_id: string;
+    department: string;
+    gender: number;
+    id: number;
+    job: string;
+    known_for_department: string;
+    name: string;
+    original_name: string;
+    popularity: number;
+    profile_path: string;
+  }[];
+};
+
+export type ReviewsType = {
+  id: number;
+  page: number;
+  results: {
+    author: string;
+    author_details: [];
+    content: string;
+    created_at: string;
+    id: string;
+    updated_at: string;
+    url: string;
+  }[];
 };

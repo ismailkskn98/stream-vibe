@@ -7,9 +7,10 @@ import styles from "./styles.module.css";
 type TrailerTextProps = {
   trailerItems: MoviesType[];
   selectedIndex: number;
+  id: number;
 };
 
-export default function TrailerText({ trailerItems, selectedIndex }: TrailerTextProps) {
+export default function TrailerText({ trailerItems, selectedIndex, id }: TrailerTextProps) {
   return (
     <article className={styles.trailerText}>
       {trailerItems.map((movie: MoviesType, index: number) => (
@@ -25,7 +26,7 @@ export default function TrailerText({ trailerItems, selectedIndex }: TrailerText
                 <p className={styles.trailerTextP}>{movie.overview}</p>
               </div>
             </div>
-            <Link href={`films/${movie.id}`} className={styles.trailerTextLink}>
+            <Link href={`film/${id}`} className={styles.trailerTextLink}>
               <FaPlay className="w-6 h-6 2xl:w-7 2xl:h-7" />
               <span className={styles.trailerTextLinkSpan}>Şimdi İzle</span>
             </Link>

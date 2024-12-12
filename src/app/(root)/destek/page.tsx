@@ -10,7 +10,7 @@ export default async function page() {
   ]);
   const allMovies: MoviesType[] = [...trendMoviesPage1.results, ...trendMoviesPage2.results];
   return (
-    <section className="my-[115px]">
+    <section className="my-[50px]">
       <Support movies={allMovies} />
     </section>
   );

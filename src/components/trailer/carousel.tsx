@@ -11,10 +11,12 @@ export default function TrailerCarousel({
   api,
   setApi,
   trailerItems,
+  setId,
 }: {
   api: CarouselApi | null;
   setApi: React.Dispatch<React.SetStateAction<CarouselApi | null>>;
   trailerItems: MoviesType[];
+  setId: React.Dispatch<React.SetStateAction<number>>;
 }) {
   const dispatch = useAppDispatch();
 
@@ -39,14 +41,13 @@ export default function TrailerCarousel({
       plugins={[
         Autoplay({
           delay: 5000,
-          // stopOnMouseEnter: true,
-          // stopOnInteraction: false,
         }),
       ]}
       className="w-full h-full"
     >
       <CarouselContent className="w-full h-full">
         {trailerItems.map((movie: MoviesType, index) => {
+          setId(movie.id);
           return (
             <CarouselItem key={index}>
               <article className="w-full h-full">

@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Information() {
   return (
-    <main className="max-w-[519px] flex flex-col items-start gap-[30px] p-[50px] bg-black-10 border border-solid border-black-15 rounded-xl">
+    <main className="max-w-[519px] max-h-min flex flex-col items-start gap-[30px] p-[50px] bg-black-10 border border-solid border-black-15 rounded-xl">
       <article className="flex flex-col items-start gap-[14px] text-grey-60">
         <div className="flex items-center gap-1">
           <CiCalendar className="w-[18px] h-[18px]" />

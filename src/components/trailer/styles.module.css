@@ -1,5 +1,5 @@
 .trailer {
-  @apply relative w-full h-[770px] overflow-hidden rounded-xl border border-solid border-black-12 z-20;
+  @apply relative w-full overflow-hidden rounded-xl border border-solid border-black-12 z-20;
 }
 .trailerLinear {
   background: rgb(38, 38, 38);

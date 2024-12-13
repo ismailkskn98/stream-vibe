@@ -47,7 +47,7 @@ export default async function page({ params }: { params: Promise<{ id: string; s
         <main className="basis-4/5 w-full flex flex-col item-start gap-[30px] rounded-xl">
           <Description description={movie.overview} />
           <Cast cast={cast.cast} />
-          <Reviews reviews={reviews.results} />
+          {reviews.results.length > 0 && <Reviews reviews={reviews.results} />}
         </main>
         <Information />
       </MovieDetail>

@@ -16,7 +16,7 @@ export default function Entry() {
           <span className="hidden lg:block">Ayrıca kendi izleme listelerinizi de oluşturabilirsiniz, böylece izlemek istediğiniz içerikleri kolayca bulabilirsiniz.</span>
         </div>
       </article>
-      <Button title="hemen İzlemeye başlayın" url="/" Icon={FaPlay} />
+      <Button title="hemen İzlemeye başlayın" url="/filmler/28" Icon={FaPlay} />
     </main>
   );
 }

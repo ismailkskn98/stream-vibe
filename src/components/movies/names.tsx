@@ -1,37 +1,39 @@
 import type { CategoryNamesType } from "@/types";
 import React from "react";
-import { Button } from "../ui/button";
+import Link from "next/link";
 
 type categoriesNameProps = {
   categoriesName: CategoryNamesType[];
-  slug?: string;
+  id?: string;
 };
 
-export default function CategoriesNames({ categoriesName, slug }: categoriesNameProps) {
+export default function CategoriesNames({ categoriesName, id }: categoriesNameProps) {
   return (
-    <main className="w-full flex flex-col gap-8 ">
+    <main className="w-full flex flex-col gap-8">
       <article className="mx-auto flex items-center gap-3 flex-wrap">
         {categoriesName.slice(0, 10).map((category: CategoryNamesType, index: number) => (
-          <Button
+          <Link
+            href={`/filmler/${category.id}`}
             key={category.id || index}
-            className={`text-grey-60 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-800 ${
-              slug && slug.toLocaleLowerCase() === category.name.toLocaleLowerCase() ? "bg-neutral-800" : ""
+            className={`px-3 py-2 rounded-sm text-grey-60 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-800 border border-solid border-black-15 ${
+              id && Number(id) === category.id ? "bg-neutral-800" : ""
             }`}
           >
             {category.name}
-          </Button>
+          </Link>
         ))}
       </article>
       <article className="mx-auto flex items-center gap-3 flex-wrap">
         {categoriesName.slice(10).map((category: CategoryNamesType, index: number) => (
-          <Button
+          <Link
+            href={`/filmler/${category.id}`}
             key={category.id || index}
-            className={`text-grey-60 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-800 ${
-              slug && slug.toLocaleLowerCase() === category.name.toLocaleLowerCase() ? "bg-neutral-800" : ""
+            className={`px-3 py-2 rounded-sm text-grey-60 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-800 border border-solid border-black-15 ${
+              id && Number(id) === category.id ? "bg-neutral-800" : ""
             }`}
           >
             {category.name}
-          </Button>
+          </Link>
         ))}
       </article>
     </main>

@@ -10,7 +10,7 @@ import WelcomeImages from "./welcomeImages";
 export default function Support({ movies }: { movies: MoviesType[] }) {
   return (
     <section className="w-full space-y-36">
-      <main className="w-full flex flex-col lg:flex-row justify-between items-center gap-20">
+      <main className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center gap-20">
         <SupportWelcome>
           <WelcomeImages movies={movies} />
         </SupportWelcome>

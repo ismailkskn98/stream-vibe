@@ -1,5 +1,5 @@
 .welcome {
-  @apply flex flex-col md:flex-row lg:flex-col items-center lg:items-start justify-between gap-[30px] md:gap-10 2xl:gap-[50px];
+  @apply mx-auto flex flex-col md:flex-row lg:flex-col items-start md:items-center lg:items-start justify-between gap-[30px] md:gap-10 2xl:gap-[50px];
 }
 .welcomeDiv {
   @apply flex flex-col items-start gap-[10px] 2xl:gap-[40px] max-w-[533px];
@@ -14,7 +14,7 @@
 /*  */
 
 .welcomeImg {
-  @apply relative w-[357px] sm:w-[510px] md:w-[429px] 2xl:w-[533px] h-[344px] md:h-[380px] 2xl:h-[477px] rounded-lg overflow-hidden border-[6px] bg-black-06 border-solid border-black-15 flex items-center justify-center;
+  @apply relative w-full sm:w-[510px] md:w-[429px] 2xl:w-[533px] h-[344px] md:h-[380px] 2xl:h-[477px] rounded-lg overflow-hidden border-[6px] bg-black-06 border-solid border-black-15 flex items-center justify-center;
 }
 .welcomeImgDiv {
   @apply absolute min-w-[449px] 2xl:min-w-[601px] min-h-[547px] 2xl:min-h-[733px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 grid grid-cols-4 grid-rows-4 gap-5;

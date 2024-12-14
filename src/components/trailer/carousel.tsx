@@ -43,7 +43,7 @@ export default function TrailerCarousel({
       ]}
       className="w-full h-full"
     >
-      <CarouselContent className="overflow-hidden w-full h-full">
+      <CarouselContent className="w-full h-full">
         {trailerItems.map((movie: MoviesType, index) => {
           return (
             <CarouselItem key={index}>

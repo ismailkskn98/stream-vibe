@@ -215,3 +215,15 @@ export type ReviewsType = {
     url: string;
   }[];
 };
+
+export type watchProvidersType = {
+  id: number;
+  results: {
+    [key: string]: {
+      link: string;
+      flatrate?: [];
+      rent?: [];
+      buy?: [];
+    };
+  };
+};

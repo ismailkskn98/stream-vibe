@@ -53,7 +53,7 @@
 /*  */
 
 .showSeeAllLink {
-  @apply absolute top-0 right-0 flex items-center justify-center min-h-full w-36 text-white bg-[#0f0f0fa8] hover:bg-[#0f0f0ffc] transition-all z-10 cursor-pointer;
+  @apply absolute h-full top-0 right-0 flex items-center justify-center max-h-[198px] md:max-h-[270px] xl:max-h-[300px] 2xl:max-h-[340px] w-36 text-white bg-[#0f0f0fa8] hover:bg-[#0f0f0ffc] transition-all z-10 cursor-pointer;
 }
 .showSeeAllBg {
   background: #0f0f0f;
@@ -61,7 +61,7 @@
   @apply h-full w-full absolute top-0 left-0;
 }
 .showSeeAllSpan {
-  @apply text-2xl font-semibold tracking-widest;
+  @apply text-lg md:text-xl lg:text-2xl font-semibold tracking-widest inline-block;
 }
 
 /*  */

@@ -8,7 +8,7 @@ import { IoVolumeMediumSharp } from "react-icons/io5";
 import styles from "./styles.module.css";
 import filmBg from "@/../public/film.png";
 
-export default function ScreenControl({ image, title, description }: { image: string; title: string; description: string }) {
+export default function ScreenControl({ image, title, description, link }: { image: string; title: string; description: string; link?: string }) {
   return (
     <article className="w-full relative">
       <Image
@@ -26,7 +26,7 @@ export default function ScreenControl({ image, title, description }: { image: st
           <p className="font-normal text-lg text-grey-60">{description.length > 200 ? description.slice(0, 200) + "..." : description}</p>
         </div>
         <div className="flex items-center gap-[10px]">
-          <Button title="Şimdi Oynat" url="#" Icon={FaPlay} />
+          <Button title="Şimdi Oynat" url={link ? link : "#"} target="_blank" Icon={FaPlay} />
           <button className="p-[14px] bg-black-06 text-white border border-solid border-black-15 rounded-lg hover:bg-black-08 transition-all">
             <Plus className="w-7 h-7" />
           </button>

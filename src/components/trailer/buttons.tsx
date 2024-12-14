@@ -16,7 +16,7 @@ export default function TrailerButtons({ progress, api }: { progress: number; ap
   }, [api]);
 
   return (
-    <article className="w-full flex-between">
+    <article className="w-full hidden lg:flex-between">
       <Button onClick={handleScrollPrev} icon={<ArrowLeftIcon className="w-7 h-7" />} className={styles.trailerButton} />
       <ProgressBar progress={progress} />
       <Button onClick={handleScrollNext} icon={<ArrowRightIcon className="w-7 h-7" />} className={styles.trailerButton} />

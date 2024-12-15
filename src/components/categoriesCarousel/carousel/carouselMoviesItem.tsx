@@ -9,11 +9,14 @@ import { FiArrowRight } from "react-icons/fi";
 export default function CarouselMoviesItem({ moviesByGenre }: { moviesByGenre: moviesByGenresType }) {
   const { genre, id, movies } = moviesByGenre;
   return (
-    <CarouselItem key={id} className={`${styles.carouselItem} group`}>
-      <Link href={`/filmler/${id}`}>
-        <div className="grid grid-cols-2 gap-1 relative">
+    <CarouselItem
+      key={id}
+      className={`max-w-[182px] md:max-w-56 lg:max-w-[276px] max-h-[201px] md:max-h-[259px] lg:max-h-[342px] bg-black-10 p-5 md:p-6 xl:p-[30px] rounded-xl cursor-pointer group border border-solid border-black-15`}
+    >
+      <Link href={`/filmler/${id}`} className="w-min h-min">
+        <div className="grid grid-cols-2 grid-rows-2 gap-1 relative overflow-hidden">
           {movies.map((movie, index) => (
-            <Image key={index} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} width={115} height={123} className={styles.categoryImage} />
+            <Image key={index} src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.original_title} width={115} height={123} className={styles.categoryImage} />
           ))}
           <div className={`${styles.categoriesImages}`}></div>
         </div>

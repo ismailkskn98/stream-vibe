@@ -59,6 +59,7 @@ export default function TrailerCarousel({
                       className="object-cover bg-center min-h-[470px]"
                     />
                   </div>
+                  {/* mobil */}
                   <div className="md:hidden relative w-full h-full flex-center">
                     <Image
                       src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}

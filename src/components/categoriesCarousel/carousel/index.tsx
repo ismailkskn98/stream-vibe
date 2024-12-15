@@ -8,7 +8,6 @@ import MobileProgressBar from "./mobileProgressBar";
 import CarouselMoviesItem from "./carouselMoviesItem";
 import styles from "./styles.module.css";
 import Autoplay from "embla-carousel-autoplay";
-import useEmblaCarousel from "embla-carousel-react";
 import CarouselMovieDetailItem from "./carouselMovieDetailItem";
 import ShowSeeAll from "./showSeeAll";
 
@@ -25,7 +24,6 @@ export type CarouselProps = {
 export default function CarouselMain(props: CarouselProps) {
   const { id, api, setApi, home, moviesByGenre, moviesDetailsItems, link } = props;
   const [showSeeAll, setShowSeeAll] = useState<boolean>(false);
-  const [emblaRef] = useEmblaCarousel({ skipSnaps: true });
   const carouselSlice = useAppSelector((state) => state.carousel[id]);
   const dispatch = useAppDispatch();
 
@@ -57,9 +55,9 @@ export default function CarouselMain(props: CarouselProps) {
   }, [api, dispatch, id, setShowSeeAll]);
 
   return (
-    <Carousel ref={emblaRef} plugins={home ? [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })] : []} setApi={setApi} className="relative mb-3">
+    <Carousel plugins={home ? [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })] : []} setApi={setApi}>
       {home && <div className={`${styles.homeCategories}`}></div>}
-      <CarouselContent className={styles.carouselContent}>
+      <CarouselContent className="w-full gap-[30px]">
         {moviesByGenre &&
           moviesByGenre.map((item: moviesByGenresType) => {
             if (item.movies.length >= 4) {

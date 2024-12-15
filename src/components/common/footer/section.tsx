@@ -8,14 +8,14 @@ import styles from "./styles.module.css";
 
 export default function FooterSection() {
   const socialLinks = [
-    { icon: <FaFacebook className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "/" },
-    { icon: <FaTwitter className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "/" },
-    { icon: <FaLinkedin className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "/" },
+    { icon: <FaFacebook className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
+    { icon: <FaTwitter className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
+    { icon: <FaLinkedin className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
   ];
   return (
     <section className={styles.footerSection}>
-      {footerSectionItems.map((section: FooterSectionItemType, index: number) => (
-        <FooterSectionItem key={index} section={section} />
+      {footerSectionItems.map((item: FooterSectionItemType, index: number) => (
+        <FooterSectionItem key={index} sectionItem={item} />
       ))}
       <article className={styles.footerSectionArticle}>
         <h3 className={styles.footerSectionH3}>Abonelik</h3>

@@ -22,7 +22,7 @@ export default function PricingCard(props: PricingCardsProps) {
       </div>
       <Price isYearly={isYearly} monthlyPrice={monthlyPrice} yearlyPrice={yearlyPrice} />
       <div className="flex items-center gap-3 2xl:gap-5">
-        <Link href={"/"} className={styles.pricingCardFreeLink}>
+        <Link href={url} className={styles.pricingCardFreeLink}>
           Ücretsiz Deneme Başlat
         </Link>
         <Link href={url} className={styles.pricingCardPlanLink}>

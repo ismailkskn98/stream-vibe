@@ -8,7 +8,7 @@ export default function CallToAction({ children }: { children: React.ReactNode }
     <section className={styles.ctaSection}>
       {children}
       <CTATitle />
-      <Button title="Ücretsiz Deneme Başlat" url="/" />
+      <Button title="Ücretsiz Deneme Başlat" url="/abonelikler" />
     </section>
   );
 }

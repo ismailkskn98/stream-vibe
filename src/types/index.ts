@@ -60,7 +60,10 @@ export type PricingPlanType = {
 
 export type FooterSectionItemType = {
   title: string;
-  links: string[];
+  links: {
+    name: string;
+    link: string;
+  }[];
 };
 
 export type MovieDetailType = {

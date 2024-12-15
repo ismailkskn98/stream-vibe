@@ -9,7 +9,7 @@ export default function FaqTitle() {
         <h2 className={styles.faqTitleH2}>Sıkça Sorulan Sorular</h2>
         <p className={styles.faqTitleP}>Sorularınız mı var? Cevaplarımız var! StreamVibe hakkında en sık sorulan soruların yanıtlarını bulmak için SSS bölümümüze göz atın.</p>
       </div>
-      <Button title="Soru Sor" url="/" />
+      <Button title="Soru Sor" url="#" />
     </article>
   );
 }

@@ -4,17 +4,20 @@ import styles from "./styles.module.css";
 
 type FooterSectionItemProps = {
   title: string;
-  links: string[];
+  links: {
+    name: string;
+    link: string;
+  }[];
 };
 
-export default function FooterSectionItem({ section }: { section: FooterSectionItemProps }) {
+export default function FooterSectionItem({ sectionItem }: { sectionItem: FooterSectionItemProps }) {
   return (
     <article className={styles.footerSectionItemArticle}>
-      <h3 className={styles.footerSectionItemH3}>{section.title}</h3>
+      <h3 className={styles.footerSectionItemH3}>{sectionItem.title}</h3>
       <div className={styles.footerSectionItemDiv}>
-        {section.links.map((link, linkIndex) => (
-          <Link key={linkIndex} href="/" className="hover:text-white transition-all">
-            {link}
+        {sectionItem.links.map((item, linkIndex) => (
+          <Link key={linkIndex} href={item.link} className="hover:text-white transition-all capitalize">
+            {item.name}
           </Link>
         ))}
       </div>

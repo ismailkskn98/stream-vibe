@@ -63,14 +63,14 @@
 /*  */
 
 .movieDetailItem {
-  @apply basis-1/2 lg:basis-1/4 max-w-48 lg:max-w-[300px] bg-black-10 flex flex-col items-center gap-5 p-5 rounded-xl cursor-pointer;
+  @apply max-w-[182px] md:max-w-[224px] xl:max-w-[284px] bg-black-10 flex flex-col items-center gap-2 p-3 md:p-4 xl:p-5 rounded-xl cursor-pointer relative;
 }
 .movieDetailItemImg {
-  @apply h-full w-full object-cover rounded-[10px];
+  @apply w-[158px] md:w-[192px] xl:w-[244px] h-[195px] md:h-[232px] xl:h-[281px] object-cover rounded-[10px];
 }
 .movieDetailItemArticle {
   @apply w-full flex items-center justify-between text-white group-hover:text-grey-60 transition-all duration-300;
 }
 .movieDetailItemSpan {
-  @apply flex items-center justify-between gap-1 bg-black-08 text-grey-60 border border-solid border-black-15 px-2 py-[6px] rounded-[51px];
+  @apply flex items-center justify-between gap-1 bg-black-08 text-grey-60 border border-solid border-black-15 px-2 py-1 rounded-[51px];
 }

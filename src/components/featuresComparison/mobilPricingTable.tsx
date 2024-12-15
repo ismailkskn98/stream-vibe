@@ -10,7 +10,6 @@ enum PricingPlan {
 
 export default function MobilPricingTable() {
   const [active, setActive] = useState<PricingPlan>(PricingPlan.basic);
-
   return (
     <section className="w-full md:hidden flex flex-col items-center gap-5">
       <article className="w-full flex-between bg-black-06 border border-solid border-black-15 rounded-lg p-2">

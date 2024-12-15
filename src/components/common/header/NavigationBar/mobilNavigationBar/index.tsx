@@ -12,7 +12,7 @@ export default function MobilNavigationBar() {
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="default" className="lg:hidden flex items-center justify-center outline-none border-none">
-            <HiMenuAlt3 className="w-9 h-9 text-white" />
+            <HiMenuAlt3 className="min-w-7 min-h-7 text-white" />
           </Button>
         </SheetTrigger>
         <SheetContent className="space-y-12 flex flex-col items-center justify-between">

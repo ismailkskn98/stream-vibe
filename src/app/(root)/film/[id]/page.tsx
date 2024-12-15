@@ -28,7 +28,7 @@ export default async function page({ params }: { params: Promise<{ id: string; s
     <section className="w-full my-[50px] space-y-36">
       <ScreenControl title={movie.title} image={movie.backdrop_path} description={movie.overview} link={watchProviders.results?.US?.link} />
       <MovieDetail>
-        <main className="basis-4/5 w-full flex flex-col item-start gap-[30px] rounded-xl">
+        <main className="w-full flex flex-col item-start gap-[30px] rounded-xl overflow-hidden">
           <Description description={movie.overview} />
           <Cast cast={cast.cast} />
           {reviews.results.length > 0 && <Reviews reviews={reviews.results} />}

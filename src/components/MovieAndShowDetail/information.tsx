@@ -50,7 +50,7 @@ export default function Information({ director, sounds, genres, release_date = "
   const fullStars = Math.floor(vote_average / 2); // Tam yıldızlar
   const emptyStars = 5 - fullStars; // Boş yıldızlar
   return (
-    <main className="max-w-[519px] max-h-min flex flex-col items-start gap-[30px] p-[50px] bg-black-10 border border-solid border-black-15 rounded-xl">
+    <main className="w-full lg:max-w-min max-h-min flex flex-row flex-wrap lg:flex-col items-start gap-[30px] p-6 sm:p-[40px] lg:p-[50px] bg-black-10 border border-solid border-black-15 rounded-xl order-2">
       <article className="flex flex-col items-start gap-[14px] text-grey-60">
         <div className="flex items-center gap-1">
           <CiCalendar className="w-[18px] h-[18px]" />
@@ -76,7 +76,7 @@ export default function Information({ director, sounds, genres, release_date = "
           <FaRegStar className="w-[18px] h-[18px]" />
           <h4 className="font-medium text-lg">Derecelendirmeler</h4>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center justify-between gap-5 flex-wrap md:flex-nowrap">
           <div className="flex flex-col items-start gap-1 bg-black-08 border border-solid border-black-15 rounded-lg p-4">
             <p className="text-white font-semibold text-xl">IMDb</p>
             <div className="flex items-center gap-1">
@@ -120,7 +120,7 @@ export default function Information({ director, sounds, genres, release_date = "
           <BiCategory className="w-[18px] h-[18px]" />
           <h4 className="font-medium text-lg">Kategoriler</h4>
         </div>
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[10px] flex-wrap">
           {genres.map((genre) => (
             <Badge key={genre.id} className="bg-black-08 text-white border border-solid border-black-15 rounded-md py-2 px-[14px]">
               {genre.name}
@@ -128,44 +128,46 @@ export default function Information({ director, sounds, genres, release_date = "
           ))}
         </div>
       </article>
-      <article className="w-full flex flex-col items-start gap-[14px] text-grey-60">
-        <div className="flex items-center gap-1">
-          <h4 className="font-medium text-lg">Yönetmen</h4>
-        </div>
-        <div className="min-w-full flex items-center gap-[10px] p-[14px] bg-black-08 border border-solid border-black-15 rounded-lg">
-          <Image
-            alt={director.name}
-            src={`https://image.tmdb.org/t/p/w300${director.profile_path}`}
-            width={57}
-            height={60}
-            className="rounded-lg max-h-[60px] max-w-[57px] object-fill"
-          />
-          <div className="flex flex-col items-start">
-            <h4 className="text-white font-medium text-lg">{director.name}</h4>
-            <p className="text-grey-60 font-medium text-base">{director.job}</p>
+      <div className="flex flex-col sm:flex-row lg:flex-col items-start gap-[30px]">
+        <article className="w-full flex flex-col items-start gap-[14px] text-grey-60">
+          <div className="flex items-center gap-1">
+            <h4 className="font-medium text-lg">Yönetmen</h4>
           </div>
-        </div>
-      </article>
-      <article className="w-full flex flex-col items-start gap-[14px] text-grey-60">
-        <div className="flex items-center gap-1">
-          <h4 className="font-medium text-lg">Müzik</h4>
-        </div>
-        {sounds.slice(0, 3).map((sound) => (
-          <div key={sound.id} className="min-w-full flex items-center gap-[10px] p-[14px] bg-black-08 border border-solid border-black-15 rounded-lg">
+          <div className="max-w-[393px] w-full flex items-center gap-[10px] p-[14px] bg-black-08 border border-solid border-black-15 rounded-lg">
             <Image
-              alt={sound.name}
-              src={`https://image.tmdb.org/t/p/w300${sound.profile_path}`}
+              alt={director.name}
+              src={`https://image.tmdb.org/t/p/w300${director.profile_path}`}
               width={57}
               height={60}
               className="rounded-lg max-h-[60px] max-w-[57px] object-fill"
             />
             <div className="flex flex-col items-start">
-              <h4 className="text-white font-medium text-lg">{sound.name}</h4>
-              <p className="text-grey-60 font-medium text-base">{sound.job}</p>
+              <h4 className="text-white font-medium text-lg">{director.name}</h4>
+              <p className="text-grey-60 font-medium text-base">{director.job}</p>
             </div>
           </div>
-        ))}
-      </article>
+        </article>
+        <article className="w-full flex flex-col items-start gap-[14px] text-grey-60">
+          <div className="flex items-center gap-1">
+            <h4 className="font-medium text-lg">Müzik</h4>
+          </div>
+          {sounds.slice(0, 1).map((sound) => (
+            <div key={sound.id} className="max-w-[393px] w-full flex items-center gap-[10px] p-[14px] bg-black-08 border border-solid border-black-15 rounded-lg">
+              <Image
+                alt={sound.name}
+                src={`https://image.tmdb.org/t/p/w300${sound.profile_path}`}
+                width={57}
+                height={60}
+                className="rounded-lg max-h-[60px] max-w-[57px] object-fill"
+              />
+              <div className="flex flex-col items-start">
+                <h4 className="text-white font-medium text-lg">{sound.name}</h4>
+                <p className="text-grey-60 font-medium text-base">{sound.job}</p>
+              </div>
+            </div>
+          ))}
+        </article>
+      </div>
     </main>
   );
 }

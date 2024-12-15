@@ -49,7 +49,7 @@
 /*  */
 
 .showSeeAllLink {
-  @apply absolute top-1/2 -translate-y-1/2 right-0 flex items-center justify-center w-12 md:w-16 lg:w-20 text-white bg-[#0f0f0fa8] hover:bg-[#0f0f0ffc] transition-all z-10 cursor-pointer py-5;
+  @apply absolute top-[40%] -translate-y-1/2 right-0 flex items-center justify-center w-12 md:w-16 lg:w-20 text-white bg-[#0f0f0fa8] hover:bg-[#0f0f0ffc] transition-all z-10 cursor-pointer py-5;
 }
 .showSeeAllBg {
   background: #0f0f0f;

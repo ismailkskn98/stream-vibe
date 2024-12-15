@@ -2,7 +2,7 @@
 import { Plus } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "../ui/carousel";
-import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from "react-icons/fa6";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { Progress } from "../ui/progress";
 import Link from "next/link";
 import moment from "moment";
@@ -39,10 +39,10 @@ export default function Reviews({ reviews }: ReviewProps) {
   }, [api]);
 
   return (
-    <article className="w-full max-w-[1085px] flex flex-col items-start gap-10 p-[50px] bg-black-10 border border-solid border-black-15 rounded-xl">
+    <article className="w-full max-w-[1085px] flex flex-col items-start gap-10 p-6 sm:p-[40px] lg:p-[50px] bg-black-10 border border-solid border-black-15 rounded-xl">
       <div className="w-full flex items-center justify-between">
         <h3 className="text-lg font-medium text-grey-60">Yorumlar</h3>
-        <Link href="" className="flex items-center gap-1 bg-black-08 border border-solid border-black-15 rounded-lg px-4 py-[14px] text-white">
+        <Link href="#" className="hidden lg:flex items-center gap-1 bg-black-08 border border-solid border-black-15 rounded-lg px-4 py-[14px] text-white">
           <Plus />
           <span>Yorumunuzu Ekleyin</span>
         </Link>
@@ -52,7 +52,7 @@ export default function Reviews({ reviews }: ReviewProps) {
           <CarouselContent className="w-full gap-5">
             {reviews?.map((item, index) => (
               <CarouselItem
-                className="max-w-[468px] max-h-[270px] flex flex-col items-start gap-5 p-10 bg-black-06 border border-solid border-black-15 rounded-xl text-grey-60"
+                className="max-w-[468px] sm:max-h-[270px] flex flex-col items-start gap-5 p-5 lg:p-10 bg-black-06 border border-solid border-black-15 rounded-xl text-grey-60"
                 key={index}
               >
                 <div className="w-full flex items-center justify-between">
@@ -62,18 +62,8 @@ export default function Reviews({ reviews }: ReviewProps) {
                     </Link>
                     <p className="font-medium text-lg">{moment(item.created_at).format("D MMMM YYYY, HH:mm")}</p>
                   </div>
-                  <div className="flex items-center gap-1 px-[10px] py-[6px] bg-black-08 border border-solid border-black-15 rounded-[51px]">
-                    <div className="flex items-center gap-[2px]">
-                      <FaStar className="w-[18px] h-[18px] text-red-45" />
-                      <FaStar className="w-[18px] h-[18px] text-red-45" />
-                      <FaStar className="w-[18px] h-[18px] text-red-45" />
-                      <FaRegStar className="w-[18px] h-[18px]" />
-                      <FaRegStar className="w-[18px] h-[18px]" />
-                    </div>
-                    <p className="font-medium text-xl text-white">4</p>
-                  </div>
                 </div>
-                <p className="text-lg font-normal">{item.content.length > 150 ? item.content.slice(0, 150) + "..." : item.content}</p>
+                <p className="text-sm lg:text-lg font-normal">{item.content.length > 150 ? item.content.slice(0, 150) + "..." : item.content}</p>
               </CarouselItem>
             ))}
           </CarouselContent>

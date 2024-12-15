@@ -49,12 +49,22 @@ export default function TrailerCarousel({
             <CarouselItem key={index}>
               <article className="w-full h-full">
                 <div className="w-full h-full">
-                  <div className="relative w-full h-full flex-center">
+                  <div className="hidden relative w-full h-full md:flex-center">
                     <Image
                       src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
                       alt={movie.title}
                       width={1700}
                       height={776}
+                      quality={100}
+                      className="object-cover bg-center min-h-[470px]"
+                    />
+                  </div>
+                  <div className="md:hidden relative w-full h-full flex-center">
+                    <Image
+                      src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                      alt={movie.title}
+                      width={800}
+                      height={480}
                       quality={100}
                       className="object-cover bg-center min-h-[470px]"
                     />

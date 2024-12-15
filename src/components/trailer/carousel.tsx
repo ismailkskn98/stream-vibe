@@ -65,7 +65,6 @@ export default function TrailerCarousel({
                       alt={movie.title}
                       width={800}
                       height={480}
-                      quality={100}
                       className="object-cover bg-center min-h-[470px]"
                     />
                   </div>

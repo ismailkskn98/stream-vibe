@@ -13,10 +13,10 @@ export default function CategoryMovieCard({ movie }: { movie: MovieDetailType })
       <div className="w-full h-full relative overflow-hidden rounded-[10px]">
         <Link href={`/film/${movie.id}`} className="block">
           <Image
-            src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
             alt={movie.title}
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             className="w-full max-h-[370px] object-cover rounded-[10px] group-hover:scale-110 transition-all"
           />
         </Link>

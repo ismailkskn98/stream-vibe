@@ -14,18 +14,18 @@ export const footerSectionItems: FooterSectionItemType[] = [
     title: "Filmler",
     links: [
       { name: "Türler", link: "/filmler" },
-      { name: "Trendler", link: "/fimler-ve-diziler" },
-      { name: "Yeni Çıkanlar", link: "/fimler-ve-diziler" },
-      { name: "Popüler", link: "/fimler-ve-diziler" },
+      { name: "Trendler", link: "/filmler-ve-diziler" },
+      { name: "Yeni Çıkanlar", link: "/filmler-ve-diziler" },
+      { name: "Popüler", link: "/filmler-ve-diziler" },
     ],
   },
   {
     title: "Diziler",
     links: [
       { name: "Türler", link: "/filmler" },
-      { name: "Trendler", link: "/fimler-ve-diziler" },
-      { name: "Yeni Çıkanlar", link: "/fimler-ve-diziler" },
-      { name: "Popüler", link: "/fimler-ve-diziler" },
+      { name: "Trendler", link: "/filmler-ve-diziler" },
+      { name: "Yeni Çıkanlar", link: "/filmler-ve-diziler" },
+      { name: "Popüler", link: "/filmler-ve-diziler" },
     ],
   },
   {

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ShowSeeAll({ link }: { link?: string }) {
   return (
-    <Link href={link || "/kategoriler"} className={styles.showSeeAllLink}>
+    <Link href={link || "/filmler"} className={styles.showSeeAllLink}>
       <div className={styles.showSeeAllBg}></div>
       <span
         className={styles.showSeeAllSpan}

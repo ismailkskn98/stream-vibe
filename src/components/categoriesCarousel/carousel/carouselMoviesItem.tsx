@@ -16,7 +16,14 @@ export default function CarouselMoviesItem({ moviesByGenre }: { moviesByGenre: m
       <Link href={`/filmler/${id}`} className="w-min h-min">
         <div className="grid grid-cols-2 grid-rows-2 gap-1 relative overflow-hidden">
           {movies.map((movie, index) => (
-            <Image key={index} src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.original_title} width={115} height={123} className={styles.categoryImage} />
+            <Image
+              key={index}
+              src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+              alt={movie.original_title}
+              width={115}
+              height={123}
+              className={`${styles.categoryImage} group-hover:scale-105 transition-all`}
+            />
           ))}
           <div className={`${styles.categoriesImages}`}></div>
         </div>

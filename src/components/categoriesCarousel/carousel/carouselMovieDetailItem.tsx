@@ -10,11 +10,17 @@ import Link from "next/link";
 export default function CarouselMovieDetailItem({ movie }: { movie: MovieDetailType }) {
   return (
     <CarouselItem key={movie.id} className={`${styles.movieDetailItem} group border border-solid border-black-15`}>
-      <div className="w-full h-full relative overflow-hidden">
-        <Link href={`/film/${movie.id}`} className="block ">
-          <Image src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} width={300} height={300} className={styles.movieDetailItemImg} />
+      <div className="w-full h-full relative overflow-hidden rounded-[10px]">
+        <Link href={`/film/${movie.id}`} className="block">
+          <Image
+            src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+            alt={movie.title}
+            width={300}
+            height={300}
+            className={`${styles.movieDetailItemImg} group-hover:scale-110 transition-all`}
+          />
         </Link>
-        <div className="absolute group-hover:bottom-0 -bottom-16 left-1/2 -translate-x-1/2 backdrop-blur-sm bg-black-15/40 w-full h-16 flex items-center justify-center transition-all">
+        <div className="absolute -bottom-1 sm:group-hover:bottom-0 sm:-bottom-16 left-1/2 -translate-x-1/2 backdrop-blur-sm bg-black-15/40 w-full h-16 flex items-center justify-center transition-all z-10">
           <p className="w-full text-white text-center font-medium text-sm">{movie.title.length > 20 ? movie.title.slice(0, 20) + "..." : movie.title}</p>
         </div>
       </div>

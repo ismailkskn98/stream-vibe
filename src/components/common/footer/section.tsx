@@ -6,12 +6,12 @@ import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import styles from "./styles.module.css";
 
+export const socialLinks = [
+  { icon: <FaFacebook className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
+  { icon: <FaTwitter className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
+  { icon: <FaLinkedin className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
+];
 export default function FooterSection() {
-  const socialLinks = [
-    { icon: <FaFacebook className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
-    { icon: <FaTwitter className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
-    { icon: <FaLinkedin className="w-5 h-5 2xl:w-6 2xl:h-6" />, href: "https://hismailkeskin.net/" },
-  ];
   return (
     <section className={styles.footerSection}>
       {footerSectionItems.map((item: FooterSectionItemType, index: number) => (

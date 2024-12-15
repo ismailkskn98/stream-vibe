@@ -44,7 +44,7 @@ export default function TrailerCarousel({
       className="w-full h-full"
     >
       <CarouselContent className="w-full h-full">
-        {trailerItems.map((movie: MoviesType, index) => {
+        {trailerItems.slice(0, 6).map((movie: MoviesType, index) => {
           return (
             <CarouselItem key={index}>
               <article className="w-full h-full">
